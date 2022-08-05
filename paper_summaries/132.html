@@ -1,0 +1,8 @@
+<p>This paper proposes a two stage reciprocal recommendation system. The first stage retrieval component finds hundreds of potential candidate items and the second stage rerank component that takes advantage of various contextual features reduces the number of candidate items after the fine-tune scoring. For the first stage, FAISS [1] is employed to find the nearest neighbors of an item in the embedding space, where the embeddings are calculated through three components. First, Deep Learning Embedding Model (DLEM) is designed to the textual data from job postings and resumes. The DLEM consists of an input layer of word2vec encoding, a convolutional neural network (CNN) layer and an attention layer. Second, they employed a representation learning framework from their previous work \cite{74/dave2018combined} that utilizes three networks: job transition network, job-skill network, and skill co-occurrence network. Third, the geolocation embedding calculator from their previous work \cite{65/liu2019tripartite} is used to generate the location embeddings.</p>
+    
+<p>The second stage is to calculate the final score by a weighted linear equation that aggregates the scores obtained from the first stage and the context-based scores including skill matching, location restriction, year of experience and education level.</p>
+
+<br>
+
+<p>References:</p>
+<p>[1]: Johnson, Jeff, Matthijs Douze, and Hervé Jégou. "Billion-scale similarity search with gpus." IEEE Transactions on Big Data 7.3 (2019): 535-547.</p>
